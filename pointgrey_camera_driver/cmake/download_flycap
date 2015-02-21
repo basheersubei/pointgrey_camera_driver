@@ -51,9 +51,15 @@ ARCHS = {
         'https://www.ptgrey.com/support/downloads/10049', (
             'flycapture2-2.6.3.4-i386/libflycapture-2.6.3.4_i386.deb',
             'flycapture2-2.6.3.4-i386/libflycapture-2.6.3.4_i386-dev.deb'),
-        'usr/lib/libflycapture.so.2.6.3.4')
+        'usr/lib/libflycapture.so.2.6.3.4'),
+    'armv7': (
+        'http://www.ptgrey.com/support/downloads/10047/', (
+            'flycapture2-2.6.3.4-armv7/libflycapture-2.6.3.4_armv7.deb',
+            'flycapture2-2.6.3.4-armv7/libflycapture-2.6.3.4_armv7-dev.deb'),
+        'usr/lib/libflycapture.so.2.6.3.4'),
     }
 
+logging.info("DEBUG: printing out sys.argv[1] " + sys.argv[1])
 archive_url, debs, shared_library = ARCHS[sys.argv[1]]
 library_dest = sys.argv[2]
 
